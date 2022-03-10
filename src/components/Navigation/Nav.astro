@@ -1,0 +1,11 @@
+---
+import NavItem from './NavItem.astro';
+const links = ['Collections', 'Men', 'Women', 'About', 'Contact'];
+---
+<nav class="hidden lg:flex h-full">
+  <ul class="flex items-center gap-6 h-full text-gray-500 text-sm">
+    {links.map(link => (
+      <NavItem>{link}</NavItem>
+    ))}
+  </ul>
+</nav>

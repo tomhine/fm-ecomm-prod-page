@@ -1,0 +1,19 @@
+---
+import Logo from './icons/Logo.astro';
+import Nav from './Navigation/Nav.astro';
+import CartLogo from './icons/CartLogo.astro';
+---
+<header class="w-full h-28 flex items-center justify-center">
+  <div class="w-full lg:max-w-6xl h-full flex items-center justify-between border-b-2">
+    <div class="flex items-center gap-12 h-full">
+      <Logo />
+      <Nav />
+    </div>
+    <div class="flex items-center gap-10">
+      <CartLogo />
+      <div class="p-0.5 rounded-full hover:bg-brand-orange cursor-pointer">
+        <img src="/images/image-avatar.png" alt="avatar profile image" class="h-12" />
+      </div>
+    </div>
+  </div>
+</header>
