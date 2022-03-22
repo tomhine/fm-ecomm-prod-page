@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
-import VueCounter from '../components/VueCounter.vue';
+import ProductImage from '../components/ProductImage.vue';
+import ProductQuantity from '../components/ProductQuantity.vue';
 ---
 <html lang="en">
 <head>
@@ -8,7 +9,7 @@ import VueCounter from '../components/VueCounter.vue';
 	<meta name="viewport" content="width=device-width">
 	<title>Frontend Mentor | E-commerce product page</title>
 
-	<link rel="icon" type="image/x-icon" href="/assets/images/favicon-32x32.png" />
+	<link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png" />
 	<style global>
 		@import "../styles/global.css";
 	</style>
@@ -16,7 +17,24 @@ import VueCounter from '../components/VueCounter.vue';
 </head>
 <body class="font-kumbh">
 	<Header />
-	<main class="flex flex-col items-center p-4">
+	<main class="flex flex-col lg:flex-row items-center lg:max-w-5xl lg:mx-auto">
+		<ProductImage client:load />
+		<section class="flex flex-col gap-4 p-6">
+			<h1 class="text-brand-orange uppercase tracking-widest text-xs font-bold">Sneaker Company</h1>
+			<h2 class="font-bold text-3xl text-neutral-darkblue">Fall Limited Edition Sneakers</h2>
+			<p class="text-neutral-darkgrayblue text-sm">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+  			durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+			<div class="flex items-center justify-between">
+				<div class="flex items-center gap-4">
+					<p class="font-bold text-3xl text-neutral-darkblue">$125.00</p>
+					<p class="px-1.5 py-0.5 text-sm rounded bg-brand-paleorange text-brand-orange font-bold">50%</p>
+				</div>
+				<p class="text-neutral-grayblue font-bold text-lg line-through">$250.00</p>
+			</div>
+			<div class="flex flex-col gap-4 mt-2">
+				<ProductQuantity client:load />
+			</div>
+		</section>
 	</main>
 </body>
 </html>
