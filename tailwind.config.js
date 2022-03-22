@@ -1,8 +1,5 @@
 module.exports = {
-  content: [
-    "./public/**/*.html",
-    "./src/**/*.{astro,js,jsx,svelte,ts,tsx,vue}",
-  ],
+  content: ["./public/**/*.html", "./src/**/*.{astro,js,jsx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
       fontFamily: {
@@ -23,6 +20,9 @@ module.exports = {
       spacing: {
         17: "68px",
         75: "300px",
+      },
+      fontSize: {
+        xxs: ["0.65rem", "1rem"],
       },
     },
   },
