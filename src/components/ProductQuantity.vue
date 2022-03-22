@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import Button from "../components/Button.vue";
 import CartIcon from "../components/icons/CartIcon.vue";
 import MinusIcon from "./icons/MinusIcon.vue";
 import PlusIcon from "./icons/PlusIcon.vue";

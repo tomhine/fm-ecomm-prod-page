@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import NavItem from "./NavItem.vue";
 
 const links = ["Collections", "Men", "Women", "About", "Contact"];

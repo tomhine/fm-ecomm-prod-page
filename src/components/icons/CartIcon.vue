@@ -1,5 +1,3 @@
-<script setup></script>
-
 <template>
   <svg
     width="22"
