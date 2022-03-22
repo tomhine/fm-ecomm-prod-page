@@ -5,7 +5,10 @@ const product = { name: "Fall Limited Edition Sneakers", price: 125 };
 const count = reactive({ value: 0 });
 const cart = reactive({ product, quantity: 0 });
 
-const decrement = () => count.value--;
+const decrement = () => {
+  if (count.value - 1 < 1) return;
+  count.value--;
+};
 const increment = () => count.value++;
 
 const addToCart = (quantity: number = 1) => {
