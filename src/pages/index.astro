@@ -17,21 +17,21 @@ import ProductQuantity from '../components/ProductQuantity.vue';
 </head>
 <body class="font-kumbh">
 	<Header />
-	<main class="flex flex-col lg:flex-row items-center lg:max-w-5xl lg:mx-auto">
+	<main class="flex flex-col lg:flex-row items-center lg:gap-8 lg:max-w-5xl lg:mx-auto lg:mt-20">
 		<ProductImage client:load />
-		<section class="flex flex-col gap-4 p-6">
+		<section class="flex flex-col gap-4 p-6 lg:p-16">
 			<h1 class="text-brand-orange uppercase tracking-widest text-xs font-bold">Sneaker Company</h1>
 			<h2 class="font-bold text-3xl text-neutral-darkblue">Fall Limited Edition Sneakers</h2>
 			<p class="text-neutral-darkgrayblue text-sm">These low-profile sneakers are your perfect casual wear companion. Featuring a 
   			durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-			<div class="flex items-center justify-between">
+			<div class="flex items-center lg:flex-col lg:items-start justify-between">
 				<div class="flex items-center gap-4">
 					<p class="font-bold text-3xl text-neutral-darkblue">$125.00</p>
 					<p class="px-1.5 py-0.5 text-sm rounded bg-brand-paleorange text-brand-orange font-bold">50%</p>
 				</div>
 				<p class="text-neutral-grayblue font-bold text-lg line-through">$250.00</p>
 			</div>
-			<div class="flex flex-col gap-4 mt-2">
+			<div class="flex flex-col lg:flex-row gap-4 mt-2">
 				<ProductQuantity client:load />
 			</div>
 		</section>
