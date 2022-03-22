@@ -1,5 +1,5 @@
 ---
-import Header from '../components/Header.astro';
+import Header from '../components/Header.vue';
 import ProductImage from '../components/ProductImage.vue';
 import ProductQuantity from '../components/ProductQuantity.vue';
 ---
@@ -16,12 +16,12 @@ import ProductQuantity from '../components/ProductQuantity.vue';
 
 </head>
 <body class="font-kumbh">
-	<Header />
-	<main class="flex flex-col lg:flex-row items-center lg:gap-8 lg:max-w-5xl lg:mx-auto lg:mt-20">
+	<Header client:load />
+	<main class="flex flex-col lg:flex-row items-center lg:gap-12 lg:max-w-5xl lg:mx-auto lg:mt-20">
 		<ProductImage client:load />
-		<section class="flex flex-col gap-4 p-6 lg:p-16">
+		<section class="flex flex-col gap-4 lg:gap-8 p-6 lg:p-16">
 			<h1 class="text-brand-orange uppercase tracking-widest text-xs font-bold">Sneaker Company</h1>
-			<h2 class="font-bold text-3xl text-neutral-darkblue">Fall Limited Edition Sneakers</h2>
+			<h2 class="font-bold text-3xl lg:text-4xl text-neutral-darkblue">Fall Limited Edition Sneakers</h2>
 			<p class="text-neutral-darkgrayblue text-sm">These low-profile sneakers are your perfect casual wear companion. Featuring a 
   			durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
 			<div class="flex items-center lg:flex-col lg:items-start justify-between">
