@@ -7,8 +7,9 @@ import { cart } from "../store/cart";
   <div class="relative">
     <CartIcon class="text-gray-600 hover:text-gray-900" />
     <span
+      v-if="cart > 1"
       class="absolute bg-brand-orange text-white text-xxs font-bold px-2 rounded-full -top-2 -right-2"
-      >{{ cart.value }}</span
+      >{{ cart }}</span
     >
   </div>
 </template>
