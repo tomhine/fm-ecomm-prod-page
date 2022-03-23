@@ -4,6 +4,7 @@ import CartIcon from "../components/icons/CartIcon.vue";
 import MinusIcon from "./icons/MinusIcon.vue";
 import PlusIcon from "./icons/PlusIcon.vue";
 import { addToCart } from "../store/cart";
+import Button from "./Button.vue";
 
 const count = ref(0);
 
@@ -22,7 +23,7 @@ const addItemsToCart = () => {
 
 <template>
   <div
-    class="grid grid-cols-3 h-14 w-full lg:w-48 items-center justify-items-center rounded-lg bg-neutral-lightgrayblue"
+    class="grid h-14 w-full grid-cols-3 items-center justify-items-center rounded-lg bg-neutral-lightgrayblue lg:w-48"
   >
     <button
       type="button"
@@ -31,7 +32,7 @@ const addItemsToCart = () => {
     >
       <MinusIcon />
     </button>
-    <p class="font-bold w-10/12 flex justify-center">{{ count }}</p>
+    <p class="flex w-10/12 justify-center font-bold">{{ count }}</p>
     <button
       type="button"
       @click="increment"
@@ -40,11 +41,8 @@ const addItemsToCart = () => {
       <PlusIcon />
     </button>
   </div>
-  <button
-    class="flex h-14 w-full items-center justify-center gap-3 rounded-lg bg-brand-orange font-semibold text-white shadow-xl hover:opacity-70"
-    @click="addItemsToCart"
-  >
+  <Button @button-click="addItemsToCart">
     <CartIcon color="white" />
     <p class="text-white">Add to cart</p>
-  </button>
+  </Button>
 </template>
