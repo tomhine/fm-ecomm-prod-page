@@ -4,6 +4,8 @@ import PreviousIcon from "./icons/PreviousIcon.vue";
 import NextIcon from "./icons/NextIcon.vue";
 import { openLightBox } from "../store/lightBox";
 
+const props = defineProps({ lightBox: { type: Boolean, default: false } });
+
 const currentImage = ref(1);
 const prevImage = () =>
   currentImage.value - 1 < 1 ? (currentImage.value = 4) : currentImage.value--;
@@ -25,7 +27,8 @@ const imageClick = () => {
         class="h-full w-full object-cover lg:rounded-2xl"
       />
       <div
-        class="absolute top-1/2 flex w-full -translate-y-1/2 items-center justify-between px-2 lg:hidden"
+        class="absolute top-1/2 flex w-full -translate-y-1/2 items-center justify-between px-2 lg:px-0"
+        :class="{ 'lg:hidden': !props.lightBox }"
       >
         <button
           type="button"

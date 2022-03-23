@@ -37,7 +37,7 @@ import CloseIcon from "./icons/CloseIcon.vue";
           <CloseIcon class="cursor-pointer text-white hover:text-brand-orange" />
         </button>
       </div>
-      <ProductImage />
+      <ProductImage :light-box="true" />
     </div>
   </transition>
 </template>
