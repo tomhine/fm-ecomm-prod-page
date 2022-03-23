@@ -6,7 +6,7 @@ const links = ["Collections", "Men", "Women", "About", "Contact"];
 </script>
 
 <template>
-  <transition
+  <Transition
     enter-active-class="transition duration-200"
     enter-from-class="opacity-0"
     enter-to-class="opacity-100"
@@ -14,9 +14,9 @@ const links = ["Collections", "Men", "Women", "About", "Contact"];
     leave-from-class="opacity-100"
     leave-to-class="opacity-0"
   >
-    <Backdrop class="bg-black/70 lg:hidden" v-if="mobileNav.isOpen" @click="closeMobileNav" />
-  </transition>
-  <transition
+    <Backdrop class="bg-black/75 lg:hidden" v-if="mobileNav.isOpen" @click="closeMobileNav" />
+  </Transition>
+  <Transition
     enter-active-class="transition duration-00"
     enter-from-class="-translate-x-full"
     enter-to-class="translate-x-0"
@@ -37,5 +37,5 @@ const links = ["Collections", "Men", "Women", "About", "Contact"];
         </ul>
       </nav>
     </div>
-  </transition>
+  </Transition>
 </template>
