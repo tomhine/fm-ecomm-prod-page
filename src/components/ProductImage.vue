@@ -4,9 +4,9 @@ import PreviousIcon from "./icons/PreviousIcon.vue";
 import NextIcon from "./icons/NextIcon.vue";
 import { openLightBox } from "../store/lightBox";
 
-const props = defineProps({ lightBox: { type: Boolean, default: false } });
+const props = defineProps({ lightBox: { type: Boolean, default: false }, imageNumber: Number });
 
-const currentImage = ref(1);
+const currentImage = ref(props.imageNumber || 1);
 const prevImage = () =>
   currentImage.value - 1 < 1 ? (currentImage.value = 4) : currentImage.value--;
 const nextImage = () =>
@@ -14,7 +14,7 @@ const nextImage = () =>
 
 const imageClick = () => {
   if (window.innerWidth < 1024) return;
-  openLightBox();
+  openLightBox(currentImage.value);
 };
 </script>
 
