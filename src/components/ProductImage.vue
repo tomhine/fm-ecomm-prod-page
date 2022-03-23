@@ -33,6 +33,7 @@ const imageClick = () => {
         <button
           type="button"
           class="flex h-10 lg:h-14 w-10 lg:w-14 items-center justify-center rounded-full bg-white"
+          :class="{ 'lg:hover:text-brand-orange': props.lightBox }"
           @click="prevImage"
         >
           <PreviousIcon />
@@ -40,6 +41,7 @@ const imageClick = () => {
         <button
           type="button"
           class="flex h-10 lg:h-14 w-10 lg:w-14 items-center justify-center rounded-full bg-white"
+          :class="{ 'lg:hover:text-brand-orange': props.lightBox }"
           @click="nextImage"
         >
           <NextIcon />
