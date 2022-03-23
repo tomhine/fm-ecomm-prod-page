@@ -1,16 +1,12 @@
 <template>
   <svg
-    width="12"
-    height="4"
     xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
+    class="h-6 w-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    stroke-width="3"
   >
-    <defs>
-      <path
-        d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z"
-        id="a"
-      />
-    </defs>
-    <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a" />
+    <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
   </svg>
 </template>
