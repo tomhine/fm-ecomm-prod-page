@@ -30,6 +30,7 @@ const addItemsToCart = () => {
       @click="decrement"
       class="flex h-14 w-14 items-center justify-center text-brand-orange"
       :class="{ 'hover:opacity-60': count >= 1, 'cursor-default': count < 1 }"
+      :disabled="count < 1"
     >
       <MinusIcon />
     </button>
