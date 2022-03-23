@@ -2,7 +2,7 @@
 import Logo from "./icons/Logo.vue";
 import Nav from "./Navigation/Nav.vue";
 import MenuIcon from "./icons/MenuIcon.vue";
-import CartQuantity from "./CartQuantity.vue";
+import CartMenu from "./CartMenu.vue";
 import { openMobileNav } from "../store/mobileNav";
 </script>
 
@@ -19,7 +19,7 @@ import { openMobileNav } from "../store/mobileNav";
         <Nav />
       </div>
       <div class="flex items-center gap-6 lg:gap-10">
-        <CartQuantity />
+        <CartMenu />
         <div class="cursor-pointer rounded-full p-0.5 hover:bg-brand-orange">
           <img src="/images/image-avatar.png" alt="avatar profile image" class="h-8 lg:h-12" />
         </div>
