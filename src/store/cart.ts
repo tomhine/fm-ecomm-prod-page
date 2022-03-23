@@ -11,4 +11,9 @@ const addToCart = (quantity: number) => {
   localStorage.setItem("cartQuantity", String(cart.value));
 };
 
-export { cart, addToCart };
+const clearCart = () => {
+  cart.value = 0;
+  localStorage.setItem("cartQuantity", String(cart.value));
+};
+
+export { cart, addToCart, clearCart };
