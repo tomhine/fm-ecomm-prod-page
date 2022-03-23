@@ -43,7 +43,7 @@ const addItemsToCart = () => {
       <PlusIcon />
     </button>
   </div>
-  <Button @button-click="addItemsToCart">
+  <Button @button-click="addItemsToCart" class="shadow-2xl shadow-brand-orange/40">
     <CartIcon color="white" />
     <p class="text-white">Add to cart</p>
   </Button>
