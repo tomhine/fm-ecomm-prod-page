@@ -2,6 +2,8 @@
 import Header from '../components/Header.vue';
 import ProductImage from '../components/ProductImage.vue';
 import ProductQuantity from '../components/ProductQuantity.vue';
+import LightBox from '../components/LightBox.vue';
+import MobileNav from '../components/Navigation/MobileNav.vue';
 ---
 <html lang="en">
 <head>
@@ -36,5 +38,7 @@ import ProductQuantity from '../components/ProductQuantity.vue';
 			</div>
 		</section>
 	</main>
+	<LightBox client:load />
+	<MobileNav client:load />
 </body>
 </html>
