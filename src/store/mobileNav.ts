@@ -1,6 +1,6 @@
 import { reactive } from "vue";
 
-export const mobileNav = reactive({ isOpen: true });
+export const mobileNav = reactive({ isOpen: false });
 
 export const openMobileNav = () => (mobileNav.isOpen = true);
 
