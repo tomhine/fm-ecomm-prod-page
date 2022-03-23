@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import ProductImage from "./ProductImage.vue";
 import Backdrop from "./Backdrop.vue";
-import { lightBox, closeLightBox } from "../store/lightBox";
+import { lightBox, closeLightBox, imageNumber } from "../store/lightBox";
 import CloseIcon from "./icons/CloseIcon.vue";
 </script>
 
 <template>
-  <transition
+  <Transition
     enter-active-class="transition duration-200"
     enter-from-class="opacity-0"
     enter-to-class="opacity-100"
@@ -15,12 +15,12 @@ import CloseIcon from "./icons/CloseIcon.vue";
     leave-to-class="opacity-0"
   >
     <Backdrop
-      class="z-10 hidden bg-black/70 lg:block"
+      class="z-10 hidden bg-black/75 lg:block"
       v-if="lightBox.isOpen"
       @click="closeLightBox"
     />
-  </transition>
-  <transition
+  </Transition>
+  <Transition
     enter-active-class="transition duration-200 ease-out"
     enter-from-class="transform scale-95 opacity-0"
     enter-to-class="transform scale-100 opacity-100"
@@ -37,7 +37,7 @@ import CloseIcon from "./icons/CloseIcon.vue";
           <CloseIcon class="cursor-pointer text-white hover:text-brand-orange" />
         </button>
       </div>
-      <ProductImage :light-box="true" />
+      <ProductImage :light-box="true" :image-number="imageNumber" />
     </div>
-  </transition>
+  </Transition>
 </template>
