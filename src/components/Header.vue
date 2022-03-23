@@ -9,7 +9,7 @@ import { openMobileNav } from "../store/mobileNav";
 <template>
   <header class="flex h-17 w-full items-center justify-center lg:h-28">
     <div
-      class="flex h-full w-full items-center justify-between border-b-2 px-6 lg:max-w-6xl lg:px-0"
+      class="flex h-full w-full items-center justify-between px-6 lg:max-w-6xl lg:border-b-2 lg:px-0"
     >
       <div class="flex h-full items-center gap-4 lg:gap-12">
         <button class="lg:hidden" @click="openMobileNav">
