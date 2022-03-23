@@ -5,8 +5,8 @@ const links = ["Collections", "Men", "Women", "About", "Contact"];
 </script>
 
 <template>
-  <nav class="hidden lg:flex h-full">
-    <ul class="flex items-center gap-6 h-full text-gray-500 text-sm">
+  <nav class="hidden h-full lg:flex">
+    <ul class="flex h-full items-center gap-6 text-sm text-gray-500">
       <NavItem v-for="link in links">{{ link }}</NavItem>
     </ul>
   </nav>
