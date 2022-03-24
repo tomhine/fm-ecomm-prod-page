@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 import CartIcon from "./icons/CartIcon.vue";
 import { cart } from "../store/cart";
 import Button from "./Button.vue";
@@ -8,6 +8,20 @@ import CartInfo from "./CartInfo.vue";
 import FadeInOutTransition from "./FadeInOutTransition.vue";
 
 const show = ref(false);
+
+const closeMenuOnEscape = (e: KeyboardEvent) => {
+  if (e.key === "Escape" && show.value) {
+    show.value = false;
+  }
+};
+
+onMounted(() => {
+  window.addEventListener("keydown", closeMenuOnEscape);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("keydown", closeMenuOnEscape);
+});
 </script>
 
 <template>

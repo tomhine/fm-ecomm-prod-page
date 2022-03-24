@@ -1,8 +1,23 @@
 <script setup lang="ts">
+import { onMounted, onBeforeUnmount } from "vue";
 import ProductImage from "./ProductImage.vue";
 import Backdrop from "./Backdrop.vue";
 import { lightBox, closeLightBox, imageNumber } from "../store/lightBox";
 import CloseIcon from "./icons/CloseIcon.vue";
+
+const closeLightBoxOnEscape = (e: KeyboardEvent) => {
+  if (e.key === "Escape" && lightBox.isOpen) {
+    closeLightBox();
+  }
+};
+
+onMounted(() => {
+  window.addEventListener("keydown", closeLightBoxOnEscape);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("keydown", closeLightBoxOnEscape);
+});
 </script>
 
 <template>
