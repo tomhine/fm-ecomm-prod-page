@@ -27,7 +27,7 @@ onBeforeUnmount(() => {
 <template>
   <Backdrop v-if="show" class="z-10" @click="show = false" />
   <div class="lg:relative">
-    <button type="button" name="cart button" class="relative" @click="show = !show">
+    <button type="button" aria-label="cart button" class="relative" @click="show = !show">
       <CartIcon
         class="text-neutral-darkgrayblue hover:text-neutral-darkblue"
         :class="{ 'text-neutral-darkblue': show }"

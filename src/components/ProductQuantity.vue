@@ -27,7 +27,7 @@ const addItemsToCart = () => {
   >
     <button
       type="button"
-      name="minus"
+      aria-label="minus"
       @click="decrement"
       class="flex h-14 w-14 items-center justify-center text-brand-orange"
       :class="{ 'hover:opacity-60': count >= 1, 'cursor-default': count < 1 }"
@@ -38,7 +38,7 @@ const addItemsToCart = () => {
     <p class="flex w-10/12 justify-center font-bold">{{ count }}</p>
     <button
       type="button"
-      name="plus"
+      aria-label="plus"
       @click="increment"
       class="flex h-14 w-14 items-center justify-center text-brand-orange hover:opacity-60"
     >
