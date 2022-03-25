@@ -19,12 +19,12 @@ import MobileNav from '../components/Navigation/MobileNav.vue';
 </head>
 <body class="font-kumbh">
 	<Header client:load />
-	<main class="flex flex-col lg:flex-row items-center lg:gap-12 lg:max-w-5xl lg:mx-auto lg:mt-20">
+	<main class="flex flex-col lg:flex-row items-center lg:gap-20 lg:max-w-5xl lg:mx-auto lg:mt-20">
 		<ProductImage client:load />
-		<section class="flex flex-col gap-4 lg:gap-8 p-6 lg:p-16">
+		<section class="flex flex-col gap-4 p-6 lg:p-8">
 			<h1 class="text-brand-orange uppercase tracking-widest text-xs font-bold">Sneaker Company</h1>
-			<h2 class="font-bold text-3xl lg:text-4xl text-neutral-darkblue">Fall Limited Edition Sneakers</h2>
-			<p class="text-neutral-darkgrayblue text-sm">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+			<h2 class="font-bold text-3xl lg:text-4.5xl text-neutral-darkblue">Fall Limited Edition Sneakers</h2>
+			<p class="text-neutral-darkgrayblue text-sm lg:text-base lg:my-4">These low-profile sneakers are your perfect casual wear companion. Featuring a 
   			durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
 			<div class="flex items-center lg:flex-col lg:items-start justify-between">
 				<div class="flex items-center gap-4">
@@ -33,7 +33,7 @@ import MobileNav from '../components/Navigation/MobileNav.vue';
 				</div>
 				<p class="text-neutral-grayblue font-bold text-lg line-through">$250.00</p>
 			</div>
-			<div class="flex flex-col lg:flex-row gap-4 mt-2">
+			<div class="flex flex-col lg:flex-row gap-4 mt-6">
 				<ProductQuantity client:visible />
 			</div>
 		</section>
