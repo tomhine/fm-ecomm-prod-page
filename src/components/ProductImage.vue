@@ -27,12 +27,13 @@ const imageClick = () => {
         class="h-full w-full object-cover lg:rounded-2xl"
       />
       <div
-        class="absolute top-1/2 flex w-full -translate-y-1/2 items-center justify-between px-2 lg:px-0 lg:w-[500px] lg:-translate-x-7"
+        class="absolute top-1/2 flex w-full -translate-y-1/2 items-center justify-between px-2 lg:w-[500px] lg:-translate-x-7 lg:px-0"
         :class="{ 'lg:hidden': !props.lightBox }"
       >
         <button
           type="button"
-          class="flex h-10 lg:h-14 w-10 lg:w-14 items-center justify-center rounded-full bg-white"
+          name="previous image"
+          class="flex h-10 w-10 items-center justify-center rounded-full bg-white lg:h-14 lg:w-14"
           :class="{ 'lg:hover:text-brand-orange': props.lightBox }"
           @click="prevImage"
         >
@@ -40,7 +41,8 @@ const imageClick = () => {
         </button>
         <button
           type="button"
-          class="flex h-10 lg:h-14 w-10 lg:w-14 items-center justify-center rounded-full bg-white"
+          name="next image"
+          class="flex h-10 w-10 items-center justify-center rounded-full bg-white lg:h-14 lg:w-14"
           :class="{ 'lg:hover:text-brand-orange': props.lightBox }"
           @click="nextImage"
         >
