@@ -4,7 +4,10 @@ import PreviousIcon from "./icons/PreviousIcon.vue";
 import NextIcon from "./icons/NextIcon.vue";
 import { openLightBox } from "../store/lightBox";
 
-const props = defineProps({ lightBox: { type: Boolean, default: false }, imageNumber: Number });
+const props = defineProps({
+  lightBox: { type: Boolean, default: false },
+  imageNumber: Number,
+});
 
 const currentImage = ref(props.imageNumber || 1);
 const prevImage = () =>
@@ -20,11 +23,17 @@ const imageClick = () => {
 
 <template>
   <div class="flex w-full flex-col items-center gap-4 lg:w-[445px]">
-    <div class="relative h-75 w-full lg:h-full lg:w-[445px]" @click="imageClick">
+    <div
+      class="relative h-75 w-full lg:h-full lg:w-[445px]"
+      @click="imageClick"
+    >
       <img
         :src="`/images/image-product-${currentImage}.jpg`"
         alt="shoes"
         class="h-full w-full object-cover lg:rounded-2xl"
+        :class="{
+          'cursor-zoom-in': !props.lightBox,
+        }"
       />
       <div
         class="absolute top-1/2 flex w-full -translate-y-1/2 items-center justify-between px-2 lg:w-[500px] lg:-translate-x-7 lg:px-0"
@@ -60,10 +69,17 @@ const imageClick = () => {
           }"
           @click="currentImage = n"
         >
-          <img :src="`/images/image-product-${n}-thumbnail.jpg`" alt="shoes" class="rounded-lg" />
+          <img
+            :src="`/images/image-product-${n}-thumbnail.jpg`"
+            alt="shoes"
+            class="rounded-lg"
+          />
           <div
             class="absolute top-0 left-0 z-10 h-full w-full rounded-lg bg-white opacity-0"
-            :class="{ 'hover:opacity-40': n !== currentImage, 'opacity-70': n === currentImage }"
+            :class="{
+              'hover:opacity-40': n !== currentImage,
+              'opacity-70': n === currentImage,
+            }"
           ></div>
         </div>
       </div>
